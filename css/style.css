@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Staatliches&display=swap');
+
+:root {
+    --primary-color: #c72727;
+    --secondary-color: #f99500;
+    --light-color: #f3f3f3;
+    --dark-color: #333;
+    --max-width: 1100px;
+}
+
+.category {
+    --sports-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--light-color);
+    line-height: 1.5;
+    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    width:100%
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 0.65rem 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.category-sports { background: var(--sports-color);}
+.category-ent { background: var(--ent-color);}
+.category-tech { background: var(--tech-color);}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: #fff;
+    padding: 0.8rem 2rem;
+}
+
+.btn-light { background: var(--light-color);}
+.btn-primary { background: var(--primary-color);}
+.btn-secondary { background: var(--secondary-color);}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.news-text {
+    font-size: 1.4rem;
+}
+
+/*  -------   navbar start   ---------  */
+
+header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 10px 10px;
+}
+
+.header-container nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-container nav .logo img {
+    width: 150px;
+}
+
+.header-container nav .logo {
+    flex-grow: 2;
+}
+
+.header-container nav .social-media {
+    flex-grow: 1;
+}
+
+.header-container nav ul {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-container nav ul li a {
+    margin-left: 5px;
+    padding: 7px 7px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.header-container nav ul li a.current {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.header-container nav ul li a:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.social-media a {
+    margin: 0 5px;
+}
+
+.social-media a i {
+    color: #777;
+}
+
+    /*  -------   mobile-navbar start  ---------  */
+
+.header-container nav .mobile-nav div {
+    width: 2.5rem;
+    background-color: #333;
+    height: 3px;
+    margin-bottom: 0.5rem;
+    
+}
+
+.header-container nav .mobile-nav {
+    position: absolute;
+    right: 0;
+    display: none;
+    cursor: pointer;
+
+}
+
+.mobile-navbar {
+    
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+.mobile-nav-block {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 40%;
+    height: 100vh;
+    z-index: 11;
+    /* display: none; */
+}
+
+.mobile-nav-block ul li a {
+    padding: 7px 12px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.mobile-nav-block ul li a.current {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.mobile-nav-block ul li a:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.mobile-nav-block ul li {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .header-container nav .mobile-nav {
+      display: block;
+    }
+
+    .header-container nav ul {
+        display: none;
+    }
+  }
+
+    /*  -------   mobile-navbar end  ---------  */  
+
+/*  -------   navbar end   ---------  */
+
+/* --------   Showcase start  ---------- */
+
+.show-case {
+    background-image: url("../images/featured.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.show-case .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.show-case-textarea {
+    max-width: var(--max-width);
+    margin: auto;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    padding: 0 1rem;
+}
+
+.show-case-textarea div {
+    max-width: 400px;
+    color: #fff;
+}
+
+.show-case-textarea div .read-more a {
+    padding: 0.4rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+
+.show-case-textarea div .read-more a:hover {
+    opacity: 0.9;
+}
+
+/* --------   Showcase end  ---------- */
+
+
+/* --------   News start  ---------- */
+
+.news {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-template-rows: repeat(4, minamax(150px, auto));
+}
+
+.news-grid .one {
+    grid-column: 1/3;
+    display: flex;
+    padding: 1rem;
+    background: #fff;
+}
+
+.news-grid .one img {
+    width: 250px;
+}
+
+.news-grid .one > div {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-grid .two {
+    padding: 1rem;
+    color: #fff;
+    background: #000;
+}
+
+.news-grid .three {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    padding: 1rem;
+    background: #fff;
+}
+
+.news-grid .three > div {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-grid .four {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    padding: 1rem;
+    background: #fff;
+}
+
+.news-grid .four > div {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-grid .five {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    padding: 1rem;
+    background: #fff;
+}
+
+.news-grid .five > div {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-grid .six {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    padding: 1rem;
+    color: #fff;
+    background: var(--primary-color);
+}
+
+.news-grid .seven {
+    grid-column: 2/4;
+    grid-row: 4/5;
+    display: flex;
+    padding: 1rem;
+    background: #fff;
+}
+
+.news-grid .seven img {
+    width: 250px;
+}
+
+.news-grid .seven > div {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --------   News end  ---------- */
+
+
+/* --------   footer start  ---------- */
+
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+}
+
+.footer-grid a {
+    color: #fff;
+}
+
+.grid-child {
+    padding: 0 2rem;
+    font-size: 1.3rem;
+}
+
+.grid-child.logo img {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.grid-child.news-letters input {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+}
+
+.grid-child.news-letters input.btn {
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.grid-child.site-links div {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(80, 79, 79);
+}
+
+.grid-child.club a {
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.grid-child.club a:hover {
+    opacity: 0.9;
+}
+
+.grid-child.copy-right {
+    text-align: center;
+    padding: 0.5rem 0;
+    grid-column: 1/5;
+    background-color: rgb(80, 79, 79);
+}
+
+/* --------   footer end  ---------- */
